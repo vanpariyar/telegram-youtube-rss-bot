@@ -10,6 +10,11 @@ on:
 jobs:
   check-videos:
     runs-on: ubuntu-latest
+
+    # Grant write permissions to the GITHUB_TOKEN for this job
+    permissions:
+      contents: write
+      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
